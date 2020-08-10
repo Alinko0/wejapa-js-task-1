@@ -1,6 +1,7 @@
 const p =document.querySelector('.content');
 const btn =document.querySelector(".btn");
 const inputs =document.querySelector(".ids");
+<<<<<<< HEAD
 const container =document.querySelector(".first-div")
 
 
@@ -24,6 +25,29 @@ if (values === "") {
    else if (values < 0 || values  > 255) {
        p.textContent=`enter a  number between 1-255`;
        container.style.backgroundColor = ''
+=======
+const container =document.querySelector(".first-div");
+Const inputValue = inputs.value.trim();
+function generateR() {
+    const random = Math.floor(Math.random()*(inputValue));
+    return random
+}
+
+inputs.addEventListener('change',function () {
+console.log(typeof( values), values);
+
+const r = generateR();
+console.log(r);
+
+const g = generateR();
+const b =generateR();
+const rgba =`rgb(${r},${g},${b})`;
+
+function changes() {
+
+    if (inputValue === "") {
+        p.textContent=`enter a valid number`;
+>>>>>>> 84aa928b183eb92cc7ac9e3aaae9a0acd71dc5c7
        p.style.backgroundColor = 'red';
    }
 
