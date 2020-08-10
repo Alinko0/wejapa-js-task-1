@@ -8,11 +8,9 @@ function generateR(min,max) {
 }
 
 inputs.addEventListener('change',function () {
-      const values = inputs.value * 1;
+ const values = inputs.value.trim();
 console.log(typeof( values), values);
 
-
-debugger;
 const r = generateR(values,255);
 console.log(r);
 
