@@ -1,26 +1,26 @@
 const p =document.querySelector('.content');
 const btn =document.querySelector(".btn");
 const inputs =document.querySelector(".ids");
-const container =document.querySelector(".first-div")
-function generateR(min,max) {
-    const random = Math.floor(Math.random()*(max - min)-1);
+const container =document.querySelector(".first-div");
+Const inputValue = inputs.value.trim();
+function generateR() {
+    const random = Math.floor(Math.random()*(inputValue));
     return random
 }
 
 inputs.addEventListener('change',function () {
- const values = inputs.value.trim();
 console.log(typeof( values), values);
 
-const r = generateR(values,255);
+const r = generateR();
 console.log(r);
 
-const g = generateR(values,255);
-const b =generateR(values,255);
+const g = generateR();
+const b =generateR();
 const rgba =`rgb(${r},${g},${b})`;
 
 function changes() {
 
-    if (!values || NaN || "") {
+    if (inputValue === "") {
         p.textContent=`enter a valid number`;
        p.style.backgroundColor = 'red';
     }
